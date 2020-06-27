@@ -1,0 +1,2048 @@
+html
+    font-size: 10px
+
+body
+    font-family: $default-font
+    color: $text_black
+    font-size: 1.6rem
+
+//Fonts
+=font
+    font-family: $default-font
+    font-weight: 500
+    margin: 0
+
+=text
+    font-family: $default-font
+
+=text-1
+    font-family: $default-font-1
+
+h1, .h1
+    +font
+    font-size: 5.5rem
+    line-height: 1.23
+    
+h2, .h2
+    +font
+    font-size: 4.2rem
+    line-height: 1.14
+
+h3, .h3
+    +font
+    font-size: 3rem
+    line-height: 1.2
+
+h4, .h4
+    +font
+    font-size: 2rem
+    line-height: 1.2
+
+h5, .h5
+    +font
+    font-size: 1.6rem
+    line-height: 1.5
+
+h6, .h6
+    +font
+    font-size: 1.2rem
+    line-height: 1.5
+    color: $third_text
+
+.df-banner-subline
+    +text
+    font-size: 3rem
+    line-height: 1.06
+
+.df-lead-text-22px
+    +text
+    font-size: 2.2rem
+    line-height: 1.45
+
+.df-text-main-16px
+    +text-1
+    font-size: 1.6rem
+    line-height: 1.5
+
+.df-text-small-12px
+    +text-1
+    font-size: 1.2rem
+    line-height: 1.5
+
+.df-text-input-14px
+    +text
+    font-size: 1.4rem
+    line-height: 1.14
+
+.df-text-radio-button-14px
+    +text
+    font-weight: 500
+    font-size: 1.4rem
+    line-height: 1.5
+
+.df-text-button-16px
+    +text
+    font-size: 1.6rem
+    line-height: 1.5
+
+.df-link
+    +text
+    font-size: 1.6rem
+    line-height: 1.25
+    color: $second_blue
+    text-decoration: underline
+    &:hover
+        color: $second_blue
+        text-decoration: underline
+
+.df-link-1
+    @extend .df-link
+    font-family: $default-font-1
+
+
+//Icon
+.df-icon
+    width: 34px
+    height: 34px
+    svg
+        display: block
+        max-width: 100%
+        max-height: 100%
+    &--small
+        width: 20px
+        height: 20px
+    &--large
+        width: 68px
+        height: 68px
+        border-radius: 50%
+        background-color: $sand
+
+//Ссылка с иконкой
+.df-iconed-link
+    display: inline-block
+    position: relative
+    +font
+    font-size: 1.8rem
+    color: $main_blue
+    padding-right: 17px
+    transition: 0.3s
+    svg
+        display: block
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        width: 7px
+        height: 12px
+        transition: 0.3s
+    &--small
+        font-size: 1.6rem
+    &:hover
+        color: $button_hover
+        svg
+            transform: translate(2px, -50%)
+
+//Внешняя ссылка
+.df-external-link
+    @extend .df-iconed-link
+    padding-right: 23px
+    svg
+        width: 12px
+        height: 12px
+    &:hover
+        svg
+            transform: translate(0px, -50%)
+
+//Назад
+.df-back-link
+    @extend .df-iconed-link
+    display: inline-block
+    position: relative
+    font-size: 1.6rem
+    padding-right: 0
+    padding-left: 30px
+    svg
+        left: 0
+        right: auto
+        width: 24px
+        height: 10px
+    &:hover
+        svg
+            transform: translate(-5px, -50%)
+
+
+//Вперёд
+.df-forward-link
+    @extend .df-back-link
+    padding-left: 0
+    padding-right: 30px
+    svg
+        left: auto
+        right: 0
+    &:hover
+        svg
+            transform: translate(5px, -50%)
+
+//Стрелка назад
+.df-back-arrow
+    display: inline-block
+    svg
+        width: 32px
+        height: 14px
+
+
+//Стрелка вперёд
+.df-forward-arrow
+    @extend  .df-back-arrow
+
+//Поделиться
+.df-share-link
+	display: inline-block
+	position: relative
+	+font
+	font-size: 1.4rem
+	padding-right: 21px
+	transition: 0.3s
+	span
+		transition: 0.3s
+	svg
+		display: block
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		width: 12px
+		height: 18px
+		transition: 0.3s
+	&:hover
+		span
+			opacity: 0.8
+		svg
+			color: $second_blue
+
+//Скачать
+.df-download-link
+    @extend .df-share-link
+    padding-left: 20px
+    padding-right: 0
+    svg
+        right: auto
+        left: 0
+        width: 10px
+        height: 10px
+
+.df-download-img-link
+    @extend .df-download-link
+
+//Стандартная кнопка
+.df-reset-button
+    box-shadow: none
+    border: none
+    border-radius: 0
+    cursor: pointer
+    -webkit-appearance: none
+
+.df-button
+    @extend .df-text-button-16px
+    box-shadow: none
+    border: none
+    border-radius: 0
+    background-color: $main_blue
+    color: $text_white
+    text-align: center
+    padding: 16px 50px
+    white-space: nowrap
+    cursor: pointer
+    transition: background-color 0.3s
+    &:hover
+        background-color: $button_hover
+    &:disabled
+        background-color: $button_disable
+        cursor: default
+    &--small
+        padding: 8px 37px
+
+//iconed-button
+.df-iconed-button
+    @extend .df-reset-button
+    position: relative
+    width: 40px
+    height: 40px
+    background-color: $white_bg
+    svg
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+
+//prev, next
+.df-prev-button, .df-next-button
+    @extend .df-iconed-button
+    background-color: rgba(0, 0, 0, 0.4)
+
+//close
+.df-close-button
+    @extend .df-iconed-button
+    background-color: transparent
+    width: 16px
+    height: 16px
+    &--small
+        width: 8px
+        height: 8px
+
+//sort
+.df-sort-button
+    @extend .df-iconed-button
+    background-color: transparent
+    width: 14px
+    height: 25px
+
+//grid-button
+.df-grid-button
+    @extend .df-iconed-button
+    width: 24px
+    height: 24px
+    background-color: transparent
+
+//list-button
+.df-list-button
+    @extend .df-grid-button
+
+//play-button
+.df-play-button
+    @extend .df-grid-button
+    width: 60px
+    height: 60px
+
+
+//point
+.df-point
+    width: 32px
+    height: 40px
+    background-image: url('/images/icons/Point.svg')
+    background-repeat: no-repeat
+    background-size: 100%
+    &--disabled
+        background-image: url('/images/icons/Point_disabled.svg')
+
+
+//Checkbox
+.df-checkbox
+    display: flex
+    align-items: center
+    outline: none
+    cursor: pointer
+    &__input
+        display: none
+        &:checked
+            & + .df-checkbox__box
+                background-size: 80%
+                border: 2px solid $second_blue
+    &__box
+        flex: none
+        width: 16px
+        height: 16px
+        border: 2px solid $third_text
+        margin-right: 12px
+        background-image: url('/images/check.svg')
+        background-repeat: no-repeat
+        background-position: 50% 60%
+        background-size: 0
+    &__description
+        @extend .df-text-radio-button-14px
+
+//Radiobutton
+.df-radiobutton
+	display: flex
+	align-items: center
+	outline: none
+	cursor: pointer
+	&__input
+		display: none
+		&:checked
+			& + .df-radiobutton__box
+				border: 2px solid $second_blue
+				&::after
+					transform: scale(1)
+					background-color: $second_blue
+	&__box
+		position: relative
+		flex: none
+		width: 16px
+		height: 16px
+		border: 2px solid $third_text
+		border-radius: 50%
+		margin-right: 12px
+		transition: 0.3s
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background-color: $third_text
+			margin: auto
+			transform: scale(0)
+			transition: 0.3s
+	&__description
+		@extend .df-text-radio-button-14px
+
+//Range
+.df-range
+	&__header, &__footer, &__from, &__to
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__header
+		padding-bottom: 24px
+	&__footer
+		padding-top: 16px
+	&__from, &__to
+		@extend .df-text-radio-button-14px
+		input
+			@extend .df-text-input-14px
+			line-height: 32px
+			width: 56px
+			text-align: center
+			outline: none
+	&__text
+		&--mr
+			margin-right: 10px
+		&--ml
+			margin-left: 10px
+	.noUi-target
+		height: 4px
+		background-color: $third_text
+		border-radius: 0
+		border: none
+		box-shadow: none
+	.noUi-connect
+		background-color: $second_blue
+	.noUi-handle
+		top: -6px
+		width: 17px
+		height: 17px
+		border-radius: 50%
+		border: 5px solid $second_blue
+		box-shadow: none
+		cursor: pointer
+		outline: none
+		transition: 0.3s
+		&::before, &::after
+			display: none
+		&::after
+			position: absolute
+			display: block
+			top: -250%
+			left: -250%
+			width: 500%
+			height: 500%
+			border-radius: 50%
+			background-color: transparent
+		&:hover
+			transform: scale(1.1)
+	.noUi-target
+		padding-right: 17px
+	.noUi-base:after
+		width: 17px;
+		content: ""
+		position: absolute
+		top: 0
+		height: 100%
+		display: block
+	.noUi-base:after
+		left: 100%
+	// .noUi-handle-upper
+	//     right: -1px!important
+	// .noUi-handle-lower
+	//     right: -15px!important
+
+//Пагинация
+.df-pagination
+	display: flex
+	align-items: center
+	color: $text_black
+    font-family: $default-font
+	&__first
+		margin-right: 15px
+	&__last
+		margin-left: 15px
+	&__pages
+        display: flex
+        align-items: center
+        margin: 0 50px
+        list-style: none
+	&__page
+		&:not(:last-of-type)
+			margin-right: 12px
+	&__link, &__link:active, &__link:focus, &__link:visited
+        font-size: 1.6rem
+        font-weight: 500
+        color: $text_black
+        text-decoration: none
+        transition: 0.3s
+        &:hover
+            opacity: 0.7
+            color: $text_black
+        &.active
+            color: $second_blue
+            text-decoration: underline
+
+.df-pagination
+    &__next, &__prev, &__last, &__first
+        display: flex
+        align-items: center
+        svg
+            display: block
+            flex: none
+            width: 7px
+            height: 18px
+            color: #B7B7B7
+            transition: 0.3s
+        &:hover
+            svg
+                color: $second_blue
+    &__next, &__last
+        svg
+            transform: rotate(180deg)
+
+//Пагинаця точки
+.df-pagination-dots
+    &__list
+        display: flex
+        align-items: center
+        list-style: none
+        margin: 0
+        padding: 0    
+    &__item
+        flex: none
+        &:not(:last-of-type)
+            margin-right: 10px
+    &__button
+        margin: 0
+        padding: 0
+        box-shadow: none
+        border: none
+        border-radius: 50%
+        width: 12px
+        height: 12px
+        background-color: $white_bg
+        transition: background-color 0.3s
+        &--active
+            background-color: $second_blue
+        &:disabled
+            background-color: $sand_bg
+
+//Steps
+.df-steps
+    display: flex
+    align-items: center
+    justify-content: space-between
+    list-style: none
+    margin: 0
+    padding: 0
+    font-family: $default-font
+    &__button
+        box-shadow: none
+        width: 48px
+        line-height: 42px
+        border-radius: 50%
+        border: 2px solid $main_blue
+        background-color: transparent
+        color: $main_blue
+        text-align: center
+        font-size: 1.4rem
+        font-weight: 500
+        cursor: pointer
+        transition: background-color 0.3s, color 0.3s
+        &--active
+            background-color: $main_blue
+            color: $text_white
+    &__step
+        flex: none
+    &__line
+        width: 100%
+        height: 2px
+        background-color: $main_blue
+
+//Иконка вопрос
+.df-help
+    position: relative
+    display: inline-block
+    &__icon
+        position: relative
+        width: 16px
+        height: 16px
+        box-shadow: none
+        border-radius: 50%
+        border: none
+        background-color: $second_blue
+        cursor: pointer
+        &:disabled
+            background-color: $button_disable
+            cursor: default
+        svg
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            width: 6px
+            height: 10px
+            margin: auto
+
+//Попап подсказки
+.df-hint-popup
+	visibility: hidden
+	position: absolute
+	bottom: 40px
+	left: -225px
+	width: 280px
+	padding: 25px
+	background-color: $white_bg
+	box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16)
+	z-index: 100
+	opacity: 0
+	transition: opacity 0.3s
+	font-family: $default-font
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		bottom: -5px
+		width: 15px
+		height: 15px
+		background-color: $white_bg
+		transform: rotate(45deg)
+	&--right
+		visibility: visible
+		opacity: 1
+		left: -25px
+		&::after
+			left: 25px
+	&--left
+		visibility: visible
+		opacity: 1
+		left: -225px
+		&::after
+			left: 225px
+
+
+	&__close
+		position: absolute
+		display: block
+		top: 16px
+		right: 16px
+		width: 8px
+		height: 8px
+		background: transparent
+		svg
+			display: block
+			max-width: 100%
+			max-height: 100%
+	&__text
+		margin-top: 10px
+		font-size: 1.2rem
+		line-height: 18px
+		color: $text_black
+		font-family: $default-font-1
+
+// Таблица
+.df-table
+	width: 100%
+    font-family: $default-font
+	td, th
+        border: 1px solid #F1F1F1
+        text-align: center
+        padding: 0 25px
+	caption
+		margin-bottom: 35px
+	thead
+        background-color: $main_blue
+        color: #fff
+        @extend h5
+        tr
+            height: 56px
+	tbody
+		background-color: $white_bg
+		font-size: 1.6rem
+		tr
+			height: 56px
+			td   
+				&:first-of-type
+					background-color: $sand_bg
+					text-align: center
+					font-weight: 500
+                
+
+.df-table
+    tbody
+        td
+            &:not(:first-of-type)
+                border-color: transparent
+                text-align: right
+    &--left
+        td, th
+            text-align: left
+            padding: 0 25px
+        tbody
+            tr
+                td
+                    &:first-of-type
+                        text-align: left
+
+// Элементы формы
+fieldset
+	width: 100%
+	border: none
+	margin: 0
+	padding: 0
+
+.df-label
+    display: block
+    @extend h5
+    margin-bottom: 7px
+
+.df-input
+	display: block
+	width: 100%
+	padding: 12px 20px
+	@extend .df-text-button-16px
+	border: none
+	box-shadow: none
+	border-radius: 0
+	outline: none
+	-webkit-appearance: none
+	box-shadow: inset 0 0 0 50px #ffffff
+	transition: 0.3s
+	&::-webkit-input-placeholder
+		font-size: 1.6rem
+		color: $second_text
+	&:-moz-placeholder
+		font-size: 1.6rem
+		color: $second_text
+	&::-moz-placeholder
+		font-size: 1.6rem
+		color: $second_text
+	&:-ms-input-placeholder
+		font-size: 1.6rem
+		color: $second_text
+	&:focus
+		box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16)
+
+.df-input-bordered
+	@extend .df-input
+	border: 1px solid $sand
+	&:focus
+		border-color: transparent
+	&.invalid
+		border-color: #C70E0E
+
+// Дропдаун
+body
+	.df-select, .df-search
+		font-family: $default-font
+		.selectize-input
+			display: block!important
+			@extend .df-text-button-16px
+			padding: 12px 20px
+			padding-right: 40px
+			box-shadow: none
+			border: none
+			border-radius: 0
+			&::after
+				width: 0!important
+				height: 0!important
+				border-left: 6px solid transparent!important
+				border-right: 6px solid transparent!important
+				border-bottom: 6px solid #24375B!important
+				transform: rotate(180deg)!important
+				cursor: pointer
+			& > .item
+				color: $text_black
+			input
+				font-size: 1.6rem
+				&::-webkit-input-placeholder
+					font-size: 1.6rem
+					color: $second_text
+				&:-moz-placeholder
+					font-size: 1.6rem
+					color: $second_text
+				&::-moz-placeholder
+					font-size: 1.6rem
+					color: $second_text
+				&:-ms-input-placeholder
+					font-size: 1.6rem
+					color: $second_text
+		.dropdown-active
+			box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16)
+			&::before
+				display: none
+			&::after
+				transform: rotate(0deg)!important
+		.selectize-dropdown
+			background-color: $white_bg
+			box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16)
+			border: none
+			border-top: 1px solid $light_grey_scroll_bar
+		.option
+			transition: background-color 0.3s
+			@extend .df-text-input-14px
+			color: #000
+			line-height: 3.4rem
+			padding-left: 20px
+			padding-top: 0
+			padding-bottom: 0
+			&:hover
+				background-color: $light_grey_hover
+			&.active
+				background-color: $light_grey_hover
+		.selectize-dropdown-content
+			position: relative
+			padding: 10px 0
+		.ps__rail-y
+			width: 8px
+			background-color: $light_grey_scroll_bar
+		.ps__thumb-y, .ps__thumb-y:hover
+			right: 0
+			width: 8px
+			background-color: $main_blue
+			border-radius: 0
+		.highlight
+			background-color: transparent!important
+			color: $second_blue
+
+	.df-select-bordered
+		@extend .df-select
+		.selectize-input
+			border: 1px solid $sand
+			&.dropdown-active
+				border-color: transparent
+		&.invalid
+			.selectize-input:not(.dropdown-active)
+				border-color: #C70E0E
+//Search
+body
+    .df-search
+        .selectize-input, .selectize-input.dropdown-active
+            &::after
+                display: none!important
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                left: auto!important
+                bottom: auto!important
+                top: 50%!important
+                transform: translateY(-50%)
+                right: 15px!important
+                width: 17px!important
+                height: 17px!important
+                background-color: #fff!important
+                background-image: url('/images/icons/Search.svg')
+                background-repeat: no-repeat
+                background-position: 50%
+                background-size: 100%
+        .highlight
+            background-color: transparent!important
+            color: $second_blue
+
+/* Календарь */
+.df-datepicker
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 16px
+        width: 18px
+        height: 18px
+        background-image: url('/images/icons/calendar.svg')
+        background-repeat: no-repeat
+        background-position: 50%
+        background-size: 100%
+        pointer-events: none
+    &__body
+        @extend .df-input
+
+body
+    .ui-datepicker
+        width: auto
+        background-color: #fff
+        color: #000
+        padding: 20px
+        box-shadow: 0 5px 20px 0 rgba(0,0,0,0.25)
+        z-index: 200!important
+        table
+            font-size: 14px
+            width: auto
+        thead
+            th
+                font-size: 14px
+                font-weight: 400
+                color: #666666
+        tbody
+            td
+                width: 35px
+                height: 30px
+                padding-left: 2px
+                padding-right: 2px
+                a
+                    line-height: 30px
+                    padding: 0
+                    text-align: center	
+        .ui-datepicker-title
+            font-size: 14px
+            font-weight: 500
+            margin: 0
+            order: 1
+        .ui-datepicker-header
+            display: flex
+            align-items: center
+            padding-left: 5px
+        .ui-datepicker-prev, .ui-datepicker-next
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            position: relative
+            cursor: pointer
+        .ui-datepicker-prev-hover, .ui-datepicker-next-hover
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            background-color: #F8F8F8
+            border-radius: 50%
+        .ui-datepicker-prev
+            order: 2
+            margin-left: auto
+            .ui-icon
+                display: block
+                background-image: url('/images/icons/Arrow_Right.svg')
+                background-repeat: no-repeat
+                background-position: 50%
+                background-size: 100%
+                width: 15px
+                height: 14px
+                transform: rotate(180deg)
+        .ui-datepicker-next
+            order: 3
+            .ui-icon
+                display: block
+                background-image: url('/images/icons/Arrow_Right.svg')
+                background-repeat: no-repeat
+                background-position: 50%
+                background-size: 100%
+                width: 15px
+                height: 14px
+        .ui-datepicker-other-month
+            color: #B7B7B7
+        .ui-datepicker-current-day
+            a
+                background-color: #00AAD2
+                color: #fff
+                border-radius: 50%
+
+//Datepicker range
+.df-datepicker-range
+    @extend .df-datepicker
+    &__body
+        @extend .df-input
+
+body
+    .date-picker-wrapper
+        font-family: $default-font
+        padding: 35px 53px 8px 53px!important
+        border: none
+        background-color: #fff
+        color: $text_black
+        box-shadow: 0 5px 20px 0 rgba(0,0,0,0.25)
+        z-index: 200!important
+        .footer
+            display: none
+        .prev, .next
+            flex: none
+            display: block
+            width: 24px
+            height: 24px
+            border-radius: 50%
+            transition: 0.3s
+            background-repeat: no-repeat
+            background-position: 50%
+            background-size: 35%
+            padding: 0!important
+            &:hover
+                background-color: $light_grey_hover
+        .prev
+            background-image: url('/images/icons/calendar_prev.svg')
+            order: 1
+            margin-right: 10px
+        .next
+            background-image: url('/images/icons/calendar_next.svg')
+            order: 2
+        .month-wrapper
+            border: none
+            padding: 0
+            background-color: transparent
+            .caption
+                font-size: 1.4rem
+                font-weight: 500
+                color: #000
+                padding: 0
+                th
+                    text-align: left
+                    &:last-of-type
+                        display: flex
+                        align-items: center
+                        width: auto
+            .month-name
+                padding-bottom: 50px
+                padding-left: 25px
+                .month-element
+                    text-transform: capitalize
+            .week-name
+                font-size: 1.4rem
+                color: $second_text
+                th
+                    font-weight: 400
+                    padding-bottom: 30px
+            table
+                td
+                    padding: 15px 0
+                    &:last-of-type
+                        .last-date-selected, .first-date-selected
+                            text-align: center!important
+                        div.hovering, div.checked
+                            &.first-date-selected
+                                background-color: transparent!important
+                                &::before
+                                    display: none
+                            &:not(.first-date-selected)
+                                position: relative
+                                background-color: transparent!important
+                                &::before
+                                    content: ''
+                                    display: block
+                                    position: absolute
+                                    top: 0
+                                    left: 0
+                                    bottom: 0
+                                    width: 74%
+                                    background-color: rgba(0, 170, 210, 0.5)
+                                    z-index: -1
+                    &:first-of-type
+                        .last-date-selected, .first-date-selected
+                            text-align: center!important
+                        div.hovering, div.checked
+                            &.last-date-selected
+                                background-color: transparent!important
+                                text-align: center
+                                &::before
+                                    display: none
+                            &:not(.last-date-selected)
+                                position: relative
+                                background-color: transparent!important
+                                &::before
+                                    content: ''
+                                    display: block
+                                    position: absolute
+                                    top: 0
+                                    right: 0
+                                    bottom: 0
+                                    width: 74%
+                                    background-color: rgba(0, 170, 210, 0.5)
+                                    z-index: -1
+                .day
+                    font-size: 1.4rem
+                    line-height: 34px
+                    padding: 0 29px
+                .day.nextMonth, .day.lastMonth
+                    display: block
+                    color: $third_text
+                    &.hovering
+                        background-color: rgba(0, 170, 210, 0.5)
+                        color: #fff!important
+                .day.checked, .day.toMonth.hovering
+                    background-color: rgba(0, 170, 210, 0.5)
+                    color: #fff!important
+                .day.real-today
+                    background-color: transparent
+                    &.checked
+                        background-color: #7fd4e8
+            .last-date-selected.first-date-selected
+                &::before
+                    display: none
+            .last-date-selected, .first-date-selected
+                position: relative
+                background-color: transparent!important
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 50px
+                    height: 50px
+                    border-radius: 50%
+                    background-color: $second_blue
+                    z-index: -1
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 0
+                    left: 0
+                    bottom: 0
+                    width: 50%
+                    background-color: rgba(0, 170, 210, 0.5)
+                    z-index: -1
+            .first-date-selected
+                &::before
+                    left: auto
+                    right: 0
+        &.single-month
+            .time
+                display: none
+
+//Search simple
+.df-search-simple
+    @extend .df-datepicker
+    &::after
+        background-image: url('/images/icons/Search.svg')
+    &__body
+        @extend .df-input
+
+//Tabs
+.df-tabs
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    font-family: $default-font
+    &__item
+        width: 100%
+    &__button
+        @extend .df-reset-button
+        width: 100%
+        padding: 22px 0
+        transition: background-color 0.3s, color 0.3s
+        @extend .df-text-radio-button-14px
+        background: $tabs_bg
+        color: $text_white
+        &--active
+            color: $text_black
+            background-color: $white_bg
+
+//Submenu
+.df-submenu
+    @extend .df-tabs
+    font-family: $default-font
+    &__item
+        position: relative
+        width: 100%
+        &:last-of-type
+            .df-submenu__button
+                background-color: $second_blue
+                color: $text_white
+        &:not(:last-of-type)
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: 0
+                width: 7px
+                height: 12px
+                background-image: url('/images/icons/Arrow.svg')
+                background-repeat: no-repeat
+                background-size: 100%
+        &:nth-last-of-type(2)
+            &::after
+                display: none
+    &__button
+        @extend .df-reset-button
+        width: 100%
+        padding: 16px 0
+        transition: background-color 0.3s, color 0.3s
+        @extend h5
+        background: $white_bg
+
+//Accordion
+.df-accordion
+    list-style: none
+    margin: 0
+    padding: 0
+    font-family: $default-font
+    &__item
+        border: 1px solid $sand_bg
+        border-top: none
+        &:first-of-type
+            border-top: 1px solid $sand_bg
+    &__header
+        @extend .df-reset-button
+        position: relative
+        width: 100%
+        padding: 16px 32px
+        padding-right: 52px
+        background-color: $white_bg
+        text-align: left
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            right: 32px
+            top: 50%
+            transform: translateY(-50%)
+            width: 10px
+            height: 7px
+            background-image: url('/images/icons/accordion_arrow.svg')
+            background-repeat: no-repeat
+            background-size: 100%
+    &__dropgown
+        display: none
+        background-color: $white_bg
+        padding: 32px
+
+//Colors
+.df-colors
+    font-family: $default-font
+    &__groups
+        display: flex
+        align-items: center
+        list-style: none
+        padding: 0
+        margin: 0
+    &__group
+        &:not(:last-of-type)
+            margin-right: 50px
+    &__name
+        font-size: 1.4rem
+        line-height: 17px
+        color: $text_black
+    &__price
+        font-size: 1.4rem
+        line-height: 17px
+        font-weight: 500
+        color: $text_black
+    &__list
+        display: flex
+        align-items: center
+        list-style: none
+        padding: 0
+        margin: 0
+        margin-top: 8px
+    &__item
+        &:not(:last-of-type)
+            margin-right: 8px
+    &__color
+        @extend .df-reset-button
+        display: block
+        position: relative
+        width: 32px
+        height: 32px
+        &--active
+            border: 1px solid #E3E3E3
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                top: -10px
+                right: -7px
+                width: 20px
+                height: 20px
+                border-radius: 50%
+                background-color: $second_blue
+                background-image: url('/images/icons/color_active.svg')
+                background-repeat: no-repeat
+                background-position: 50%
+                background-size: 60%
+    &__selected
+        font-size: 1.4rem
+        line-height: 1.21
+        font-weight: 500
+        color: $text_black
+        margin-top: 19px
+
+//Основной баннер, внизу медиазапросы
+.df-main-banner
+	background-repeat: no-repeat
+	background-position: 50%
+	background-size: cover
+	&__wrap
+		max-width: 1792px
+	&__inner
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: cover
+		padding: 32px 43px
+		height: 650px
+		color: #fff
+	&__title
+		font-size: 5.5rem
+		line-height: 1.23
+	&__subtitle
+		margin-top: 4px
+		font-size: 3rem
+		line-height: 1.067
+
+//Credit banner
+.df-credit-banner
+    font-family: $default-font
+    display: block
+    position: relative
+    width: 160px
+    height: 160px
+    border-radius: 50% 50% 50% 0
+    background-color: $fire_Red
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        left: 17px
+        bottom: 17px
+        width: 16px
+        height: 16px
+        background-image: url('/images/icons/Plus.svg')
+        background-repeat: no-repeat
+        background-size: 100%
+    &__center
+        padding-top: 35px
+        padding-right: 30px
+    &__name, &__price, &__credit
+        font-size: 1.6rem
+        font-weight: 500
+        color: $light_grey_hover
+        text-align: right
+        line-height: 1
+    &__price
+        font-size: 2.4rem
+        margin-top: 15px
+
+//360
+.df-360
+    @extend .df-reset-button
+    display: block
+    width: 88px
+    height: 88px
+    border-radius: 50%
+    background-image: url('/images/icons/360.svg')
+    background-repeat: no-repeat
+    background-size: 100%
+
+//Info
+.df-info
+    position: relative
+    font-family: $default-font
+    padding-left: 32px
+    &__icon
+        position: absolute
+        left: 0
+        top: 0
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background-color: $info_icon
+        svg
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            width: 2px
+            height: 9px
+            margin: auto
+    &__text
+        font-size: 1.4rem
+        line-height: 1.21
+        color: #000
+
+//List
+.df-list
+    padding-left: 20px
+    margin-top: 34px
+    &__title
+        padding-left: 20px
+    &__item
+        position: relative
+        padding-left: 20px
+        @extend h5
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            left: 0
+            top: 0.5em
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background-color: $text_black
+        &:not(:last-of-type)
+            margin-bottom: 7px
+
+
+//Убираем стрелки у инпутов с типом number
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+input[type="number"]
+	-moz-appearance: textfield
+
+input[type="number"]:hover,
+input[type="number"]:focus
+	-moz-appearance: number-input
+	-moz-appearance: textfield
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none;
+	margin: 0;
+
+//Стили PopUp + анимация появления Vue (popup)
+.df-popup
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(#000000, 0.8)
+	z-index: 1000
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	// &.popup-enter
+	// 	.df-popup__center
+	// 		opacity: 0
+	// 		transform: translateY(200px) scale(0.7)
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: 100vh
+	&__center
+		position: relative
+	&__close
+		position: absolute
+		display: block
+		padding: 10px
+		top: 7px
+		right: 14px
+		z-index: 10
+		svg
+			display: block
+			width: 16px
+			height: 16px
+			fill: $second_text
+			transition: 0.3s
+		&:hover
+			svg
+				fill: $third_text
+
+.popup-enter-active
+	overflow: hidden
+	animation: enter-popup 0.3s
+	.df-popup__center
+		animation: enter-center 0.3s
+
+
+.popup-leave-active
+	animation: enter-popup 0.3s reverse
+	.df-popup__center
+		animation: enter-center 0.3s reverse
+
+
+@keyframes enter-popup
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes enter-center
+	0%
+		transform: translateY(50px) scale(0.95)
+	100%
+		transform: translateY(0) scale(1)
+
+//Разводящий попап вакансии
+.vacancy-popup
+    display: flex
+    align-items: center
+    justify-content: center
+    .df-popup__wrap
+        max-width: 1216px
+        background-color: #fff
+        padding: 64px 48px
+        margin: 32px
+        height: auto
+        min-height: initial
+        position: relative
+        flex-direction: column
+    .df-popup__center
+        position: static
+    &__title
+        font-size: 20px
+        text-align: center
+        margin-bottom: 32px
+    &__buttons
+        display: flex
+        justify-content: center
+        .df-button
+            margin: 0 16px
+
+@media (max-width: 1262px)
+    .vacancy-popup .df-popup__wrap
+        margin: 40px
+
+@media (max-width: $md-max)
+    .vacancy-popup .df-popup__wrap
+        margin: 16px
+    
+@media (max-width: 640px)
+    .vacancy-popup
+        .df-popup__wrap
+            padding: 48px
+        &__title
+            margin-bottom: 16px
+        &__buttons
+            flex-direction: column
+            .df-button
+                margin: 16px 0
+
+@media (max-width: 400px)
+    .vacancy-popup
+        .df-popup__wrap
+            padding: 32px
+        &__title
+            font-size: 18px
+
+//Разводящий попап ОСАГО
+.redirect-popup
+    display: flex
+    align-items: center
+    justify-content: center
+    .df-popup__wrap
+        max-width: 600px
+        background-color: #fff
+        padding: 64px 48px
+        margin: 32px
+        height: auto
+        min-height: initial
+        position: relative
+        flex-direction: column
+    .df-popup__center
+        position: static
+    .df-popup__title
+        font-size: 26px
+        text-align: center
+        margin-bottom: 32px
+        font-weight: 500
+    .df-popup__text
+        font-size: 18px
+        text-align: center
+        margin-bottom: 48px
+    .df-popup__buttons
+        display: flex
+        justify-content: center
+        .df-button
+            margin: 0 16px
+
+@media (max-width: 1262px)
+    .redirect-popup .df-popup__wrap
+        margin: 40px
+
+@media (max-width: $md-max)
+    .redirect-popup .df-popup__wrap
+        margin: 16px
+    
+@media (max-width: 640px)
+    .redirect-popup
+        .df-popup__wrap
+            padding: 48px
+        .df-popup__title
+            margin-bottom: 16px
+        .df-popup__buttons
+            flex-direction: column
+            .df-button
+                margin: 16px 0
+
+@media (max-width: 400px)
+    .redirect-popup
+        .df-popup__wrap
+            padding: 32px
+        .df-popup__title
+            font-size: 22px
+        .df-popup__text
+            font-size: 16px
+
+// Попап Режим работы
+.work-popup
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    z-index: 1000
+    right: 0
+    bottom: 0
+    overflow: auto
+    &__wrap
+        max-width: 740px
+        background-color: #fff
+        padding: 46px 50px 38px 54px
+        margin: 32px
+        height: auto
+        min-height: initial
+        position: relative
+        flex-direction: column
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16)
+    .df-popup__center
+        position: static
+    &__title
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        margin-bottom: 24px
+    &__text
+        font-size: 16px
+        line-height: 24px
+    &__list
+        font-size: 14px
+        line-height: 21px
+        margin-top: 5px
+        margin-bottom: 16px
+        a
+            pointer-events: none
+    &__info
+        margin-bottom: 16px
+    &__hashtag
+        color: $button_hover
+        font-weight: 500
+        font-size: 14px
+        line-height: 21px
+    &__link
+        color: $second_blue
+    &__show-mob
+        display: none
+
+@media (max-width: 1432px)
+    .work-popup
+        align-items: flex-end
+        top: 0
+        &__title
+            font-size: 18px
+            line-height: 21px
+            text-align: center
+            margin-bottom: 18px
+        &__text
+            font-size: 14px
+            line-height: 21px
+        &__list
+            font-size: 12px
+            line-height: 17px
+        &__hashtag
+            font-size: 12px
+            line-height: 17px
+
+
+@media (max-width: 1262px)
+    .work-popup .df-popup__wrap
+        margin: 40px
+
+    .work-popup
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(#000000, 0.8)
+        z-index: 1000
+        overflow: auto
+        -webkit-overflow-scrolling: touch
+        align-items: center
+        &__wrap
+            display: flex
+            align-items: center
+            justify-content: center
+        &__center
+            position: relative
+        &__close
+            position: absolute
+            display: block
+            padding: 10px
+            top: 7px
+            right: 14px
+            z-index: 10
+            svg
+                display: block
+                width: 16px
+                height: 16px
+                fill: $second_text
+                transition: 0.3s
+            &:hover
+                svg
+                    fill: $third_text
+
+@media (max-width: $md-max)
+    .work-popup 
+        &__wrap
+            margin: 16px
+            padding: 32px
+        &__info
+            margin-bottom: 12px
+        &__list
+            margin-bottom: 12px
+        &__link
+            white-space: nowrap
+        &__br
+            display: none
+    
+@media (max-width: 640px)
+    .work-popup
+        &__title
+            margin-bottom: 16px
+
+@media (max-width: 480px)
+    .work-popup
+        align-items: flex-start
+        &__text
+            font-size: 14px
+            line-height: 21px
+        &__list
+            font-size: 12px
+            line-height: 16px
+            margin-bottom: 12px
+            margin-top: 12px
+            li + li
+                margin-top: 8px
+            a
+                pointer-events: all
+        &__info
+            margin-bottom: 12px
+        &__hashtag
+            font-size: 12px
+            line-height: 16px
+        &__hide-mob
+            display: none
+        &__show-mob
+            display: block
+
+@media (max-width: 415px)
+    .work-popup 
+        &__wrap
+            padding: 40px 16px 24px
+        &__title
+            text-align: left
+
+
+//Cookie
+.cookie
+    background-color: #fff
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 999
+    transform: translateY(100%)
+    transition: transform 1.2s ease 0s
+    &.is-show
+        transform: translateY(0)
+    &-inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 21px 32px
+    .df-text-input-14px
+        color: $second_text
+    &-more
+        background-color: transparent
+        color: $third_text
+        &:hover
+            background-color: transparent
+    &-buttons
+        display: flex
+        justify-content: flex-end
+        a
+            display: inline-block
+            padding: 7px 50px
+            margin-left: 20px
+    &-mobile
+        display: none
+
+$popup-wrap: calc(100vh - 112px)
+$popup-margin: 112px
+$padding-y: 30px
+$lh-title: 36px
+$margin-title: 25px
+$margin-info: 32px 
+$button: 48px
+
+$margin-title-md: 25px
+$popup-wrap-md: calc(100vh - 64px)
+$popup-margin-md: 64px
+
+$title-lh-sm: 24px
+$title-mb-sm: 10px
+$padding-y-sm: 48px
+$padding-bottom-sm: 20px
+
+.cookie-popup
+    display: flex
+    align-items: center
+    justify-content: center
+    .df-popup__wrap
+        max-width: 800px
+        background-color: #fff
+        padding: $padding-y 30px $padding-y 50px
+        margin: 56px
+        max-height: $popup-wrap
+        height: auto
+        min-height: inherit
+        position: relative
+        flex-direction: column
+        width: 100%
+    .df-popup__center
+        position: static
+    &__title
+        font-size: 30px
+        line-height: $lh-title
+        color: #000
+        text-align: center
+        margin-bottom: $margin-title
+    &__info
+        font-size: 14px
+        line-height: 18px
+        font-family: 'HyundaiSansText'
+        color: #000
+        position: relative
+        width: 100%
+        padding-right: 25px
+        margin-bottom: $margin-info
+        max-height: calc(100vh - #{$popup-margin} - 2*#{$padding-y} - #{$lh-title} - #{$margin-title} - #{$margin-info} - #{$button})
+    &__buttons
+        display: flex
+        justify-content: center
+        width: 100%
+        .df-button
+            width: calc(50% - 16px)
+            padding: 12px 50px
+            min-height: $button
+            &--wh
+                background-color: transparent
+                color: #666
+                border: 2px solid #E4DCD3
+                padding: 10px 50px
+                &:hover
+                    background-color: transparent
+
+@media (max-width: 1262px)
+    .cookie-popup .df-popup__wrap
+        margin: 40px
+    .cookie-desktop
+        max-width: 60%
+    .cookie-inner
+        padding-left: 40px
+        padding-right: 40px
+
+
+@media (max-width: 900px)
+    .cookie
+        &-buttons
+            a
+                padding: 7px 15px
+                margin-left: 10px
+
+    .cookie-desktop
+        max-width: 65%
+
+    .cookie-popup
+        .df-popup__wrap
+            max-height: $popup-wrap-md
+            padding: $padding-y 20px $padding-y 40px
+            margin: 32px
+        &__info
+            max-height: calc(100vh - #{$popup-margin-md} - 2*#{$padding-y} - #{$lh-title} - #{$margin-title-md} - #{$margin-info} - #{$button})
+    
+
+@media (max-width: $md-max)
+    .cookie-popup .df-popup__wrap
+        margin: 16px
+
+    .cookie
+        &-inner
+            padding: 21px 16px
+        &-mobile
+            display: block
+        &-desktop
+            display: none
+
+    
+@media (max-width: 640px)
+    .cookie-popup
+        .df-popup__wrap
+            padding: 48px
+        &__title
+            margin-bottom: 16px
+
+    .cookie
+        &-mobile
+            width: 100%
+            margin-bottom: 13px
+        &-inner
+            flex-wrap: wrap
+        &-buttons
+            width: 100%
+            a.cookie-more        
+                border: 2px solid #E4DCD3
+                padding: 5px 20px
+
+    .cookie-popup__buttons .df-button
+        width: 210px
+
+
+@media (max-width: 480px)
+    .cookie-buttons
+        justify-content: space-between
+        a
+            margin-left: 0
+            width: calc(50% - 8px)
+
+    .cookie-popup__buttons .df-button
+        width: 100%
+    .cookie-popup__title
+        font-size: 20px
+        line-height: $title-lh-sm
+        margin-bottom: $title-mb-sm
+
+    .cookie-popup
+        .df-popup__wrap
+            max-height: $popup-wrap-md
+            padding: $padding-y-sm 16px $padding-bottom-sm 16px
+        &__info
+            max-height: calc(#{$popup-wrap-md} - #{$padding-y-sm} - #{$padding-bottom-sm} - #{$title-lh-sm} - #{$title-mb-sm} - #{$margin-info} - #{$button})
+    
+
+//Стилизация яндекс карт
+[class*="ymaps-2-1"][class*="-ground-pane"]
+	filter: grayscale(100%) brightness(111%) contrast(90%) invert(0%)
+	/* filter: grayscale(100%) brightness(65%) contrast(110%) invert(100%); */
+
+[class*="ymaps-2-1"][class*="-balloon__content"]
+	overflow: hidden !important
+	/* width: 220px !important; */
+	height: auto !important
+	padding: 25px !important
+	position: relative !important
+	box-sizing: content-box
+	margin: 0 !important
+
+[class*="ymaps-2-1"][class*="-balloon__layout"]
+	left: -20px !important
+
+[class*="ymaps-2-1"][class*="-balloon_layout_normal"]
+	box-shadow: none !important
+
+//lazy load
+// .lazypreview
+// 	&:not(.lazyloaded):not(.lazy-loaded)
+// 		background-repeat: no-repeat!important
+// 		background-position: 50%!important
+// 		background-size: cover!important
+
+/*==========  Desktop First  ==========*/
+@media only screen and (max-width : 1850px)
+	.df-main-banner
+		&__wrap
+			max-width: 1536px
+		&__inner
+			height: 545px
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : $xl-max)
+	html
+        font-size: 10px
+
+	.container, .container-fluid
+        padding-left: 32px
+        padding-right: 32px
+
+	.df-main-banner
+		&__wrap
+			max-width: 1280px
+		&__inner
+			height: 440px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : $lg-max)
+    //Увеличиваем поля в сетке бутстрап
+    .container, .container-fluid
+        padding-left: 40px
+        padding-right: 40px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : $md-max)
+    //Возвращаем поля в исходное состояние
+    .container, .container-fluid
+        padding-left: $grid-gutter-width / 2
+        padding-right: $grid-gutter-width / 2
+
+    h1, .h1
+        font-size: 38px
+
+    h2, .h2
+        font-size: 30px
+        line-height: 1.06
+
+    h3, .h3
+        font-size: 20px
+        line-height: 1.2
+
+    h4, .h4
+        font-size: 18px
+        line-height: 1.125
+    .df-banner-subline
+        font-size: 18px
+        line-height: 1.22
+
+    .df-main-banner
+        &__title
+            font-size: 38px
+            line-height: 40px
+
+
+    body
+        .date-picker-wrapper
+            padding: 35px 27px 8px 27px!important
+            .month-wrapper
+                table
+                    .day
+                        line-height: 17px
+                        padding: 0 9px
+
+@media only screen and (max-width : 640px)
+	.df-main-banner
+		&__inner
+			height: 120vw
+			padding: 24px 16px
+		&__subtitle
+			margin-top: 8px
+			font-size: 18px
+			line-height: 22px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+

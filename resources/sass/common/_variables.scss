@@ -1,0 +1,78 @@
+// Fonts
+$default-font: "HyundaiSansHead", sans-serif;
+$default-font-1: "HyundaiSansText", sans-serif;
+
+// BG
+$white_bg: #ffffff;
+$gray_bg: #F6F3F2;
+$sand_bg: #E4DCD3;
+$tabs_bg: #444444;
+$bottom_bg: #103A71;
+
+// Main colors
+$main_blue: #002C5F;
+$second_blue: #00AAD2;
+$fire_Red: #E63312;
+$sand: #E4DCD3;
+
+// Text colors
+$text_black: #000000;
+$text_white: #ffffff;
+$second_text: #666666;
+$third_text: #B7B7B7;
+$fourth_text: #103A71;
+
+// Additional colors
+$button_hover: #103A71;
+$button_disable: #777673;
+$light_grey_scroll_bar: #F1F1F1;
+$light_grey_hover: #F8F8F8;
+$info_icon: #C4C4C4;
+
+// Bootstrap link
+$link-hover-color: '';
+$link-hover-decoration: none;
+
+// Bootstrap grid
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 1263px,
+  xl: 1600px
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 767px,
+  md: 1263px,
+  lg: 1280px,
+  xl: 1536px
+) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           32px !default;
+
+// Breakpoints
+$xl-min: 1600px;
+$xl-max: 1599px;
+$lg-min: 1263px;
+$lg-max: 1262px;
+$md-min: 768px;
+$md-max: 767px;
+
+// >1601px max-width container
+$large-cont: 1240px
