@@ -116,4 +116,11 @@ $(function() {
 		$(this).toggleClass('active');
 		$('.sidebar__list').slideToggle(50);
 	});
+
+	$(window).on('resize', function(){
+		if ( $(window).width() > 992 ) {
+			$('.mobile-btn').removeClass('active');
+			$('.sidebar__list').removeAttr('style');
+		}
+	});
 });
