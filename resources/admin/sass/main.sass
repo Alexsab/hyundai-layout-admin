@@ -318,12 +318,14 @@ a
 	min-width: 650px
 	@media only screen and (max-width : 650px)
 		padding-right: 15px
+		padding-left: 15px
 	&__wrap
 		overflow: auto
 		@media only screen and (max-width : 768px)
 			margin-bottom: 30px
 		@media only screen and (max-width : 650px)
 			margin-right: -15px
+			margin-left: -15px
 	&__flex
 		display: flex
 		align-items: center
@@ -453,6 +455,9 @@ fieldset
 	display: flex
 	align-items: center
 	flex-wrap: wrap
+	label
+		@media only screen and (max-width : 580px)
+			width: 100%
 	@media only screen and (max-width : 580px)
 		width: 100%
 		margin-bottom: 15px
