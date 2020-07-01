@@ -267,9 +267,15 @@ a
 			max-width: 100%
 			height: auto
 	&__list
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
 		@media only screen and (max-width : 992px)
+			flex-direction: row
 			display: none
 			padding-top: 40px
+		@media only screen and (max-width : 768px)
+			flex-direction: column
 
 // Mobile button
 .mobile-btn
