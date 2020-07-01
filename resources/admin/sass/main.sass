@@ -60,6 +60,7 @@ a
 	outline: none
 	transition: 0.3s
 	cursor: pointer
+	text-align: center
 	&:hover
 		opacity: 0.7
 	&--small
@@ -68,6 +69,10 @@ a
 	&--large
 		line-height: 56px
 		padding: 0 50px
+		@media only screen and (max-width : 480px)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 15px
 	&--iconed
 		span
 			margin-right: 10px
@@ -187,25 +192,45 @@ a
 	&__right
 		width: 100%
 		padding-bottom: 100px
+		@media only screen and (max-width : 768px)
+			margin-top: 30px
+			padding-bottom: 30px
 	&__line
 		display: flex
 		align-items: center
 		margin-top: 50px
+		@media only screen and (max-width : 480px)
+			flex-direction: column
+			margin-top: 0
 		&--3
 			fieldset
 				width: 33.33%
+				@media only screen and (max-width : 480px)
+					width: 100%
+					margin-right: 0 !important
+					margin-bottom: 15px
 				&:not(:last-of-type)
 					margin-right: 30px
 		&--2
 			fieldset
 				width: 50%
+				@media only screen and (max-width : 480px)
+					width: 100%
+					margin-right: 0 !important
+					margin-bottom: 15px
 				&:not(:last-of-type)
 					margin-right: 40px
 		&--w33
 			width: 33%
+			@media only screen and (max-width : 480px)
+				width: 100%
+				margin-right: 0 !important
+				margin-bottom: 15px
 		button
 			&:not(:last-of-type)
 				margin-right: 30px
+				@media only screen and (max-width : 480px)
+					margin-right: 0
 		&--center
 			justify-content: center
 
@@ -288,8 +313,16 @@ a
 		justify-content: space-between
 		width: 100%
 		padding: 0 30px
+		h2
+			@media only screen and (max-width : 768px)
+				font-size: 35px
+			@media only screen and (max-width : 480px)
+				font-size: 30px
+				margin-bottom: 15px
 		&--caption
 			padding: 0
+			@media only screen and (max-width : 480px)
+				flex-direction: column
 	&__controls
 		display: flex
 		align-items: center
@@ -340,6 +373,8 @@ fieldset
 	font-weight: 500
 	color: #000
 	margin-bottom: 15px
+	@media only screen and (max-width : 480px)
+		margin-bottom: 5px
 
 .input
 	display: block
@@ -391,9 +426,17 @@ fieldset
 	display: flex
 	align-items: center
 	flex-wrap: wrap
+	@media only screen and (max-width : 480px)
+		width: 100%
+		margin-bottom: 15px
+		flex-direction: column
+		align-items: flex-start
 	&.multiple
 		label
 			margin-right: 25px
+			@media only screen and (max-width : 480px)
+				margin-right: 0
+				width: 100%
 		.file-upload__remove
 			display: inline-block
 	&__input
@@ -402,6 +445,9 @@ fieldset
 		font-size: 16px
 		color: #B7B7B7
 		margin-left: 25px
+		@media only screen and (max-width : 480px)
+			margin-left: 0
+			margin-top: 8px
 		&--ml0
 			margin-left: 0
 	&__remove
