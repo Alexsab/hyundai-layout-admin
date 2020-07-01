@@ -316,10 +316,14 @@ a
 	width: 100%
 	display: block
 	min-width: 650px
+	@media only screen and (max-width : 650px)
+		padding-right: 15px
 	&__wrap
 		overflow: auto
 		@media only screen and (max-width : 768px)
 			margin-bottom: 30px
+		@media only screen and (max-width : 650px)
+			margin-right: -15px
 	&__flex
 		display: flex
 		align-items: center
