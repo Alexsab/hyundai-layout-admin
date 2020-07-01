@@ -69,7 +69,8 @@ a
 	&--large
 		line-height: 56px
 		padding: 0 50px
-		@media only screen and (max-width : 480px)
+		@media only screen and (max-width : 580px)
+			line-height: 40px
 			width: 100%
 			margin-right: 0
 			margin-bottom: 15px
@@ -199,13 +200,13 @@ a
 		display: flex
 		align-items: center
 		margin-top: 50px
-		@media only screen and (max-width : 480px)
+		@media only screen and (max-width : 580px)
 			flex-direction: column
 			margin-top: 0
 		&--3
 			fieldset
 				width: 33.33%
-				@media only screen and (max-width : 480px)
+				@media only screen and (max-width : 580px)
 					width: 100%
 					margin-right: 0 !important
 					margin-bottom: 15px
@@ -214,7 +215,7 @@ a
 		&--2
 			fieldset
 				width: 50%
-				@media only screen and (max-width : 480px)
+				@media only screen and (max-width : 580px)
 					width: 100%
 					margin-right: 0 !important
 					margin-bottom: 15px
@@ -222,14 +223,14 @@ a
 					margin-right: 40px
 		&--w33
 			width: 33%
-			@media only screen and (max-width : 480px)
+			@media only screen and (max-width : 580px)
 				width: 100%
 				margin-right: 0 !important
 				margin-bottom: 15px
 		button
 			&:not(:last-of-type)
 				margin-right: 30px
-				@media only screen and (max-width : 480px)
+				@media only screen and (max-width : 580px)
 					margin-right: 0
 		&--center
 			justify-content: center
@@ -322,12 +323,12 @@ a
 		h2
 			@media only screen and (max-width : 768px)
 				font-size: 35px
-			@media only screen and (max-width : 480px)
-				font-size: 30px
 				margin-bottom: 15px
+			@media only screen and (max-width : 580px)
+				font-size: 30px
 		&--caption
 			padding: 0
-			@media only screen and (max-width : 480px)
+			@media only screen and (max-width : 768px)
 				flex-direction: column
 				align-items: flex-start
 				text-align: left
@@ -347,8 +348,11 @@ a
 		font-size: 14px
 	td, th
 		border: 1px solid #F1F1F1
+		padding: 5px 0
 	caption
 		margin-bottom: 35px
+		@media only screen and (max-width : 580px)
+			margin-bottom: 20px
 	thead
 		background-color: #002C5F
 		font-size: 16px
@@ -367,6 +371,10 @@ a
 					background-color: #E4DCD3
 					text-align: center
 					font-weight: 500
+					@media only screen and (max-width : 768px)
+						width: auto
+						padding-left: 15px
+						padding-right: 15px
 
 /* Элементы формы */
 fieldset
@@ -381,7 +389,7 @@ fieldset
 	font-weight: 500
 	color: #000
 	margin-bottom: 15px
-	@media only screen and (max-width : 480px)
+	@media only screen and (max-width : 580px)
 		margin-bottom: 5px
 
 .input
@@ -434,7 +442,7 @@ fieldset
 	display: flex
 	align-items: center
 	flex-wrap: wrap
-	@media only screen and (max-width : 480px)
+	@media only screen and (max-width : 580px)
 		width: 100%
 		margin-bottom: 15px
 		flex-direction: column
@@ -442,7 +450,7 @@ fieldset
 	&.multiple
 		label
 			margin-right: 25px
-			@media only screen and (max-width : 480px)
+			@media only screen and (max-width : 580px)
 				margin-right: 0
 				width: 100%
 		.file-upload__remove
@@ -453,7 +461,7 @@ fieldset
 		font-size: 16px
 		color: #B7B7B7
 		margin-left: 25px
-		@media only screen and (max-width : 480px)
+		@media only screen and (max-width : 580px)
 			margin-left: 0
 			margin-top: 8px
 		&--ml0
