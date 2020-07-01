@@ -214,9 +214,11 @@ a
 	flex: none
 	margin-right: 50px
 	background-color: #fff
+	position: relative
 	@media only screen and (max-width : 768px)
 		width: 100%
 		margin-right: 0
+		min-height: 60px
 	&__link
 		display: flex
 		align-items: center
@@ -238,6 +240,44 @@ a
 			display: block
 			max-width: 100%
 			height: auto
+	&__list
+		@media only screen and (max-width : 768px)
+			display: none
+			padding-top: 40px
+
+// Mobile button
+.mobile-btn
+	width: 50px
+	height: 50px
+	background-color: transparent
+	border: none
+	cursor: pointer
+	display: none
+	position: absolute
+	right: 0
+	top: 5px
+	@media only screen and (max-width : 768px)
+		display: block
+	span
+		width: 25px
+		height: 2px
+		background-color: $main_blue
+		display: block
+		margin: 3px auto
+		transform: rotate(0)
+		opacity: 1
+		transition: all .2s ease-in-out
+	&.active span
+		&:first-child
+			transform: rotate(45deg)
+			position: relative
+			top: 5px
+		&:nth-child(2)
+			opacity: 0
+		&:last-child
+			transform: rotate(-45deg)
+			position: relative
+			top: -5px
 
 /* Таблица */
 .table

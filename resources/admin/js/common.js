@@ -111,4 +111,9 @@ $(function() {
 		showOtherMonths: true
 	};
 	$.datepicker.setDefaults($.datepicker.regional['ru']);
+
+	$('.mobile-btn').on('click', function() {
+		$(this).toggleClass('active');
+		$('.sidebar__list').slideToggle(50);
+	});
 });
