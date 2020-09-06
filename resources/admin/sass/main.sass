@@ -41,6 +41,7 @@ a
 		-webkit-focus-ring-color: transparent
 		outline: none
 		text-decoration: none
+		color: $White
 	&:focus
 		outline: 1px solid $ActiveRed
 
@@ -62,6 +63,7 @@ a
 	transition: 0.3s
 	cursor: pointer
 	text-align: center
+	margin-bottom: 10px
 	&:focus
 		outline: 2px solid $ActiveRed
 	&:hover
@@ -218,6 +220,8 @@ a
 			margin-top: 30px
 			padding-bottom: 30px
 			width: 100%
+	&__text
+		margin-bottom: 15px
 	&__line
 		display: flex
 		align-items: center
@@ -381,6 +385,7 @@ a
 		&--caption
 			padding: 0
 			margin-bottom: 15px
+			flex-wrap: wrap
 			@media only screen and (max-width : 768px)
 				flex-direction: column
 				align-items: flex-start
