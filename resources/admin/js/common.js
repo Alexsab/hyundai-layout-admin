@@ -124,15 +124,10 @@ $(function() {
 		}
 	});
 
-	$('body').keydown(function(e){
-		if(e.keyCode === 32) {
-			return false;
-		}
-	});
-
 	$('.keydown').keydown(function(e){
 		if(e.keyCode === 13 || e.keyCode === 32) {
 	     $(this).find('input').trigger('click');
+		 return false;
 	  }
 		
 	});
