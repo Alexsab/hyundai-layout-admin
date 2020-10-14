@@ -155,7 +155,7 @@ function hyundai_layout_admin_watch() {
 	watch(projects.hyundai_layout_admin.code.src).on('change', browserSync.reload);
 };
 
-module.exports = parallel(hyundai_layout_admin_styles, hyundai_layout_admin_styles_libs, hyundai_layout_admin_scripts, hyundai_layout_admin_scripts_libs, hyundai_layout_admin_browsersync, hyundai_layout_admin_watch);
+exports.hyundai_layout_admin = parallel(hyundai_layout_admin_styles, hyundai_layout_admin_styles_libs, hyundai_layout_admin_scripts, hyundai_layout_admin_scripts_libs, hyundai_layout_admin_browsersync, hyundai_layout_admin_watch);
 
 
 /* hyundai_layout_admin END */
