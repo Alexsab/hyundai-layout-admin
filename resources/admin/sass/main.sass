@@ -353,7 +353,8 @@ a
 	width: auto
 	display: inline-block
 	min-width: 100%
-	&__wrap
+	&__wrap,
+	&__wrap-fixed
 		overflow: auto
 		min-width: 100%
 		margin-left: calc(-#{$offset} + 3px)
@@ -430,6 +431,9 @@ a
 	td, th
 		border: 1px solid $Light_grey_scroll_bar
 		padding: 5px 30px
+	th
+		position: sticky !important
+		top: 0
 	th .table__flex
 		cursor: pointer
 	tr.search
