@@ -25,6 +25,7 @@ const { src, dest, parallel, series, watch, task } = require('gulp'),
 	connect        = require('gulp-connect-php'),
 	header         = require('gulp-header'),
 	notify         = require('gulp-notify'),
+	sourcemaps     = require('gulp-sourcemaps'),
 	rename         = require('gulp-rename'),
 	responsive     = require('gulp-responsive'),
 	pngquant       = require('imagemin-pngquant'),
@@ -109,10 +110,12 @@ function hyundai_layout_admin_browsersync() {
 // Custom Styles
 function hyundai_layout_admin_styles() {
 	return src(projects.hyundai_layout_admin.styles.src)
+	.pipe(sourcemaps.init())
 	.pipe(eval(preprocessor)({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(concat(projects.hyundai_layout_admin.styles.output))
 	.pipe(autoprefixer({ grid: true, overrideBrowserslist: ['last 10 versions'] }))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	.pipe(sourcemaps.write())
 	.pipe(dest(projects.hyundai_layout_admin.styles.dest))
 	.pipe(browserSync.stream())
 

@@ -353,23 +353,40 @@ a
 	width: auto
 	display: inline-block
 	min-width: 100%
-	padding-left: calc(#{$offset} - 3px)
-	padding-right: 15px
-	@media only screen and (max-width : 992px)
-		padding-right: 15px
-		padding-left: 15px
-		display: inline-block
-		width: auto
 	&__wrap
 		overflow: auto
 		min-width: 100%
 		margin-left: calc(-#{$offset} + 3px)
 		margin-right: -15px
+		.table
+			padding-left: calc(#{$offset} - 3px)
+			padding-right: 15px
+			@media only screen and (max-width : 992px)
+				padding-right: 15px
+				padding-left: 15px
 		@media only screen and (max-width : 768px)
 			margin-bottom: 30px
 		@media only screen and (max-width : 992px)
 			margin-right: -15px
 			margin-left: -15px
+	&__wrap-fixed
+		overflow: scroll
+		position: relative
+		margin-right: -15px
+		table
+			position: relative
+			border-collapse: collapse
+			padding-right: 15px
+			thead th
+				position: sticky !important
+				top: 0
+			thead th:first-child
+				left: -3px
+				z-index: 1
+			tbody th
+				position: sticky !important
+				left: -3px
+
 	&__flex
 		display: flex
 		align-items: center
@@ -424,10 +441,11 @@ a
 		@media only screen and (max-width : 580px)
 			margin-bottom: 20px
 	thead
-		background-color: $Main_blue
 		font-size: 16px
 		color: $White
 		font-weight: 500
+		th
+			background-color: $Main_blue
 		tr
 			height: 56px
 	tbody
@@ -435,16 +453,15 @@ a
 		font-size: 16px
 		tr
 			height: 56px
-			td
-				&:first-of-type
-					width: 71px
-					background-color: $Sand_BG
-					text-align: center
-					font-weight: 500
-					@media only screen and (max-width : 768px)
-						width: auto
-						padding-left: 15px
-						padding-right: 15px
+			> *:first-child
+				width: 71px
+				background-color: $Sand_BG
+				text-align: center
+				font-weight: 500
+				@media only screen and (max-width : 768px)
+					width: auto
+					padding-left: 15px
+					padding-right: 15px
 
 /* Элементы формы */
 fieldset
